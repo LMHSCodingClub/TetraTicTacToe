@@ -1,6 +1,6 @@
 # TetraTicTacToe
 
-A Python GUI program
+A Python GUI program consisting of a 4x4x4 cube as an extended version of Tic Tac Toe. 
 
 ## Getting Started
 
@@ -58,8 +58,8 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
+* [Atom](https://atom.io/) - The IDE used
+* [Python](https://www.python.org/) - The language used
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
@@ -74,11 +74,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Phillip Grabovsky** - *User Interface* - [Phillip-Grabovsky](https://github.com/Phillip-Grabovsky)
 * **Varun Singh** - *Win Function* - [Borumer](https://github.com/Borumer)
-* **Aviel Resnick - *User Interface* - []
-* **David Volchonock** - ** - []
-* **Clayton Ostroff** - *Main function* - []
-* **John Tur** - ** - []
-* **Andrew Wang** - ** - []
+* **Aviel Resnick** - *User Interface* - [Aviel-Resnick](https://github.com/Aviel-Resnick)
+* **David Volchonock** - ** - []()
+* **Clayton Ostroff** - *Main function* - []()
+* **John Tur** - ** - []()
+* **Andrew Wang** - ** - []()
 
 ## License
 
