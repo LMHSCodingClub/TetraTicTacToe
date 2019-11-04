@@ -1,7 +1,9 @@
+import checkWin
+
 player = 1
 board = createEmptyBoard()
 
-while !checkWin():
+while not checkWin():
     player *= -1
     cube = getUserInput()
     board[cube[0]][cube[1]][cube[2]] = player
