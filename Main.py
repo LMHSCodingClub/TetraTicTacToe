@@ -1,14 +1,10 @@
-#import checkWin
+import CheckWin
+import User
 
 
 player = 1
 move = 0
 
-def checkWin(move):
-    if move < 3:
-        return False
-    else:
-        return True
 
 def createEmptyBoard():
     print("ok")
@@ -24,15 +20,12 @@ def createEmptyBoard():
 
     return board
 
-def getUserInput(move):
-    return [move,move,move]
-
 board = createEmptyBoard()
 
-while not checkWin(move):
+while not CheckWin.checkWin(move):
     move+=1
     player *= -1
-    cube = getUserInput(move)
+    cube = User.getUserInput(move)
     board[cube[0]][cube[1]][cube[2]] = player
     print(board)
 
