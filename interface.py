@@ -53,7 +53,7 @@ while not CheckWin.checkWin(move):
 
 
     #now that user input has been detected, play the game
-    cube = User.getUserInput(move)
+    cube = User.translateXY(move)
     board[cube[0]][cube[1]][cube[2]] = player
     print(board)
 
