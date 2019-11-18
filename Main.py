@@ -21,7 +21,7 @@ def createEmptyBoard():
 
 board = createEmptyBoard()
 
-while not CheckWin.checkWin(move):
+while not CheckWin.checkWin(move, board):
     move+=1
     player *= -1
     cube = User.getUserInput(move)
