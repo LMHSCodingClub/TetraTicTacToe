@@ -9,3 +9,5 @@ colorMap = Image.open('gameboardColor.png') # This is the colormap, we never wan
 pix = colorMap.load()
 value = pix[300,300][:3] # returns color value at x,y
 print(value)
+
+colorMap.close()
