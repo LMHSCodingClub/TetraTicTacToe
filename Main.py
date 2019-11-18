@@ -5,7 +5,6 @@ import User
 player = 1
 move = 0
 
-
 def createEmptyBoard():
     print("ok")
     board = []

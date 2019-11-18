@@ -34,17 +34,21 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+Tetra Tic-Tac-Toe is divided into two parts and workflows: the user interface and the win function logic. 
 
-### Break down into end to end tests
+### User Interface Test
 
-Explain what these tests test and why
+The user inteface test tests the 
 
 ```
 Give an example
 ```
 
-### And coding style tests
+### Win Function Test
+
+The win function tests to see if the computer knows when the game has ended based on the current state of the board and which user won. 
+
+### Coding Style Tests
 
 Explain what these tests test and why
 
@@ -60,7 +64,7 @@ Add additional notes about how to deploy this on a live system
 
 * [Atom](https://atom.io/) - The IDE used
 * [Python](https://www.python.org/) - The language used
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [PyGame](https://www.pygame.org/news) - Python framework
 
 ## Contributing
 
@@ -75,10 +79,10 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Phillip Grabovsky** - *User Interface* - [Phillip-Grabovsky](https://github.com/Phillip-Grabovsky)
 * **Varun Singh** - *Win Function* - [Borumer](https://github.com/Borumer)
 * **Aviel Resnick** - *User Interface* - [Aviel-Resnick](https://github.com/Aviel-Resnick)
-* **David Volchonock** - ** - []()
-* **Clayton Ostroff** - *Main function* - []()
-* **John Tur** - ** - []()
-* **Andrew Wang** - ** - []()
+* **David Volchonock** - *?* - [?]()
+* **Clayton Ostroff** - *Main function* - [?]()
+* **John Tur** - *?* - [reflectronic](https://github.com/reflectronic)
+* **Andrew Wang** - *Win Function* - [?]()
 
 ## License
 
