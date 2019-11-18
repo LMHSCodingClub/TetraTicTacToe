@@ -33,7 +33,7 @@ move = 0
 board = createEmptyBoard()
 
 
-while not CheckWin.checkWin(move):
+while not CheckWin.checkWin(move, board):
     #update move stuff
     move+=1
     player *= -1
@@ -53,7 +53,7 @@ while not CheckWin.checkWin(move):
 
 
     #now that user input has been detected, play the game
-    cube = User.translateXY(move)
+    cube = User.getUserInput(event.pos)
     board[cube[0]][cube[1]][cube[2]] = player
     print(board)
 
