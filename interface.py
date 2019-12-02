@@ -27,7 +27,7 @@ def createEmptyBoard():
 LEFT = 1 # left button
 (width, height) = (600, 750)
 backgroundColor = (255,255,255)
-bg = pygame.image.load('/home/phillip/projects/TetraTicTacToe/gameboard.png')
+bg = pygame.image.load('gameboard.png')
 screen = pygame.display.set_mode((width, height))
 pygame.display.flip()# screen modifications must be done before flip()
 
