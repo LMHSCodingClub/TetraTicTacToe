@@ -1,9 +1,7 @@
 from PIL import Image
 
-'''
 def getUserInput(move):
     return [move,move,move]
-'''
 
 # color to coordinate dict
 colorValues = {
@@ -76,9 +74,10 @@ colorValues = {
     "333":(0, 255, 255),
 }
 
-colorMap = Image.open('gameboardColor.png') # This is the colormap, we never want the user to see it
-pix = colorMap.load()
-value = pix[350,700][:3] # returns color value at x,y
-print(value)
+def getColor(pos):
+    colorMap = Image.open('gameboardColor.png') # This is the colormap, we never want the user to see it
+    pix = colorMap.load()
+    value = pix[pos[0],pos[1]][:3] # returns color value at x,y
+    return(value)
 
-colorMap.close()
+    colorMap.close()

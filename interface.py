@@ -23,7 +23,7 @@ def createEmptyBoard():
 LEFT = 1 # left button
 (width, height) = (600, 750)
 backgroundColor = (255,255,255)
-bg = pygame.image.load('/home/phillip/projects/TetraTicTacToe/gameboard.png')
+bg = pygame.image.load('gameboard.png')
 screen = pygame.display.set_mode((width, height))
 pygame.display.flip()# screen modifications must be done before flip()
 
@@ -51,13 +51,12 @@ while not CheckWin.checkWin(cube, board, player):
         pygame.quit()
 
     #if you left click
-    elif event.type == pygame.MOUSEBUTTONDOWN and event.button == LEFT:
-        print ("You pressed the left mouse button at (%d, %d)" % event.pos)
     elif event.type == pygame.MOUSEBUTTONUP and event.button == LEFT:
-        print ("You released the left mouse button at (%d, %d)" % event.pos)
-
+        print(event.pos)
+        print(User.getColor(event.pos))
 
     #now that user input has been detected, play the game
+
     cube = User.getUserInput(event.pos)
     board[cube[0]][cube[1]][cube[2]] = player
     updateBoard()
