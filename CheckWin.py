@@ -33,7 +33,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    #diagonal check 1
    sumd1 = 0
    for i in range(4):
-           sumd1= board[i][i][z]
+           sumd1 += board[i][i][z]
            if sumd1= player*4:
                print("Player " + str(player) + " wins!")
                return True
@@ -41,7 +41,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    #diagonal check 2
    sumd2 = 0
    for i in range(4):
-           sumd1 += board[i][5-i][z]
+           sumd1 += board[i][3-i][z]
            if sumd1 = player*4:
                print("Player " + str(player) + " wins!")
                return True
@@ -49,7 +49,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    #diagonal check 3
    sumd3 = 0
    for i in range(4):
-           sumd3= board[x][i][i]
+           sumd3 += board[x][i][i]
            if sumd3= player*4:
                print("Player " + str(player) + " wins!")
                return True
@@ -57,7 +57,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    #diagonal check 4
    sumd4 = 0
    for i in range(4):
-           sumd4 += board[x][5-i][i]
+           sumd4 += board[x][3-i][i]
            if sumd4 = player*4:
                print("Player " + str(player) + " wins!")
                return True
@@ -66,7 +66,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    #diagonal check 5
    sumd5 = 0
    for i in range(4):
-           sumd5= board[i][y][i]
+           sumd5 += board[i][y][i]
            if sumd5= player*4:
                print("Player " + str(player) + " wins!")
                return True
@@ -74,7 +74,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    #diagonal check 6
    sumd6 = 0
    for i in range(4):
-           sumd6 += board[5-i][y][i]
+           sumd6 += board[3-i][y][i]
            if sumd6 = player*4:
                print("Player " + str(player) + " wins!")
                return True
@@ -82,6 +82,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
             
             
    #Grand Diagonal Checks (4)
+   
    
    #GD check 1
    sumgd1 = 0
@@ -94,7 +95,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    #GD check 2
    sumgd2 = 0
    for i in range(4):
-           sumdgd2 += board[5-i][i][i]
+           sumdgd2 += board[3-i][i][i]
            if sumgd2 = player*4:
                print("Player " + str(player) + " wins!")
                return True
@@ -102,7 +103,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    #GD check 3
    sumgd3 = 0
    for i in range(4):
-           sumdgd3 += board[i][5-i][i]
+           sumdgd3 += board[i][3-i][i]
            if sumgd3 = player*4:
                print("Player " + str(player) + " wins!")
                return True
@@ -110,7 +111,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    #GD check 4
    sumgd4 = 0
    for i in range(4):
-           sumdgd4 += board[i][i][5-i]
+           sumdgd4 += board[i][i][3-i]
            if sumgd4 = player*4:
                print("Player " + str(player) + " wins!")
                return True
@@ -119,4 +120,35 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    
    return False
   
+   
+   '''
+  def check_diagonals(a,b,c):
+   sumd = 0
+   for i in range(4):
+           sumd1= board[i][i][z]
+           if sumd1= player*4:
+               print("Player " + str(player) + " wins!")
+               return True
+            else
+               return False
+            
+  sum = 0
+  for i in range(4)
+   sum = check_axes(i,y,z)
+   if sum = player * 4:
+           print ("Player" + str(player) + " wins!")
+           return True
+  
+  
+  def check_axes (x, y, z, sum):
+      return sum + board[x][y][z]
+         
+         
+         
+   '''
+   
+   
+   
+   
+   
    
