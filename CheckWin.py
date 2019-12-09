@@ -2,16 +2,16 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    """
    * move[0] = x,
    """
- 
+
    x = move[0]
    y = move[1]
    z = move[2]
-   
+
    # z-check
    if board[x][y] == [player, player, player, player]:
-       print("Player " + str(player) + " wins!")"
-       return True]
-  
+       print("Player " + str(player) + " wins!")
+       return True
+
    # x-check
    sumx = 0
    for i in range(4):
@@ -19,7 +19,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
       if sum == player*4:
          print("Player " + str(player) + " wins!")
          return True
-     
+
    # y-check
    sumy = 0
    for i in range(4):
@@ -27,17 +27,17 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
            if sum == player*4:
                print("Player " + str(player) + " wins!")
                return True
- 
+
 
 
    #diagonal check 1
    sumd1 = 0
    for i in range(4):
            sumd1 += board[i][i][z]
-           if sumd1= player*4:
+           if sumd1 == player*4:
                print("Player " + str(player) + " wins!")
                return True
-            
+
    #diagonal check 2
    sumd2 = 0
    for i in range(4):
@@ -45,7 +45,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
            if sumd1 = player*4:
                print("Player " + str(player) + " wins!")
                return True
-            
+
    #diagonal check 3
    sumd3 = 0
    for i in range(4):
@@ -53,7 +53,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
            if sumd3= player*4:
                print("Player " + str(player) + " wins!")
                return True
-            
+
    #diagonal check 4
    sumd4 = 0
    for i in range(4):
@@ -61,8 +61,8 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
            if sumd4 = player*4:
                print("Player " + str(player) + " wins!")
                return True
-            
-            
+
+
    #diagonal check 5
    sumd5 = 0
    for i in range(4):
@@ -70,7 +70,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
            if sumd5= player*4:
                print("Player " + str(player) + " wins!")
                return True
-            
+
    #diagonal check 6
    sumd6 = 0
    for i in range(4):
@@ -78,12 +78,12 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
            if sumd6 = player*4:
                print("Player " + str(player) + " wins!")
                return True
-            
-            
-            
+
+
+
    #Grand Diagonal Checks (4)
-   
-   
+
+
    #GD check 1
    sumgd1 = 0
    for i in range(4):
@@ -91,7 +91,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
            if sumgd1 = player*4:
                print("Player " + str(player) + " wins!")
                return True
-            
+
    #GD check 2
    sumgd2 = 0
    for i in range(4):
@@ -99,7 +99,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
            if sumgd2 = player*4:
                print("Player " + str(player) + " wins!")
                return True
-            
+
    #GD check 3
    sumgd3 = 0
    for i in range(4):
@@ -107,7 +107,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
            if sumgd3 = player*4:
                print("Player " + str(player) + " wins!")
                return True
-            
+
    #GD check 4
    sumgd4 = 0
    for i in range(4):
@@ -115,12 +115,12 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
            if sumgd4 = player*4:
                print("Player " + str(player) + " wins!")
                return True
-   
-   
-   
+
+
+
    return False
-  
-   
+
+
    '''
   def check_diagonals(a,b,c):
    sumd = 0
@@ -131,24 +131,18 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
                return True
             else
                return False
-            
+
   sum = 0
   for i in range(4)
    sum = check_axes(i,y,z)
    if sum = player * 4:
            print ("Player" + str(player) + " wins!")
            return True
-  
-  
+
+
   def check_axes (x, y, z, sum):
       return sum + board[x][y][z]
-         
-         
-         
+
+
+
    '''
-   
-   
-   
-   
-   
-   
