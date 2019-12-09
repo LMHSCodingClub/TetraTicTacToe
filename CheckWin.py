@@ -42,7 +42,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    sumd2 = 0
    for i in range(4):
            sumd1 += board[i][3-i][z]
-           if sumd1 = player*4:
+           if sumd1 == player*4:
                print("Player " + str(player) + " wins!")
                return True
 
@@ -50,7 +50,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    sumd3 = 0
    for i in range(4):
            sumd3 += board[x][i][i]
-           if sumd3= player*4:
+           if sumd3 == player*4:
                print("Player " + str(player) + " wins!")
                return True
 
@@ -58,7 +58,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    sumd4 = 0
    for i in range(4):
            sumd4 += board[x][3-i][i]
-           if sumd4 = player*4:
+           if sumd4 == player*4:
                print("Player " + str(player) + " wins!")
                return True
 
@@ -67,7 +67,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    sumd5 = 0
    for i in range(4):
            sumd5 += board[i][y][i]
-           if sumd5= player*4:
+           if sumd5 == player*4:
                print("Player " + str(player) + " wins!")
                return True
 
@@ -75,7 +75,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    sumd6 = 0
    for i in range(4):
            sumd6 += board[3-i][y][i]
-           if sumd6 = player*4:
+           if sumd6 == player*4:
                print("Player " + str(player) + " wins!")
                return True
 
@@ -88,7 +88,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    sumgd1 = 0
    for i in range(4):
            sumdgd1 += board[i][i][i]
-           if sumgd1 = player*4:
+           if sumgd1 == player*4:
                print("Player " + str(player) + " wins!")
                return True
 
@@ -96,7 +96,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    sumgd2 = 0
    for i in range(4):
            sumdgd2 += board[3-i][i][i]
-           if sumgd2 = player*4:
+           if sumgd2 == player*4:
                print("Player " + str(player) + " wins!")
                return True
 
@@ -104,7 +104,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    sumgd3 = 0
    for i in range(4):
            sumdgd3 += board[i][3-i][i]
-           if sumgd3 = player*4:
+           if sumgd3 == player*4:
                print("Player " + str(player) + " wins!")
                return True
 
@@ -112,7 +112,7 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    sumgd4 = 0
    for i in range(4):
            sumdgd4 += board[i][i][3-i]
-           if sumgd4 = player*4:
+           if sumgd4 == player*4:
                print("Player " + str(player) + " wins!")
                return True
 
