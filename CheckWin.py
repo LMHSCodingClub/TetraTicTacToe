@@ -1,7 +1,4 @@
 def checkWin(move, board, player): # move: [x, y, z] AKA the address
-   """
-   * move[0] = x,
-   """
 
    x = move[0]
    y = move[1]
