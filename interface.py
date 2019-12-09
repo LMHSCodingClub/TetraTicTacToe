@@ -2,7 +2,11 @@ import pygame
 from pygame.locals import *
 import CheckWin
 import User
+import math
 pygame.init()
+
+def updateBoard():
+    print(board)
 
 #how to start a new game w/empty board
 def createEmptyBoard():
@@ -61,7 +65,4 @@ while not CheckWin.checkWin(cube, board, player):
     board[cube[0]][cube[1]][cube[2]] = player
     updateBoard()
 
-
-
-def updateBoard():
-    print("Player " + str(player)  + " won!")
+print("player: " + player + " won!")
