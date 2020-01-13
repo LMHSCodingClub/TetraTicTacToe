@@ -82,7 +82,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **David Volchonock** - *?* - [?]()
 * **Clayton Ostroff** - *Main function* - [?]()
 * **John Tur** - *?* - [reflectronic](https://github.com/reflectronic)
-* **Andrew Wang** - *Win Function* - [?]()
+* **Andrew Wang** - *Win Function* - [Andrewxwang](https://github.com/andrewxwang)
 
 ## License
 
