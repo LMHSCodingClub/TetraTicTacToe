@@ -9,7 +9,14 @@ def checkWin(move, board, player): # move: [x, y, z] AKA the address
    x = move[0]
    y = move[1]
    z = move[2]
-
+   
+   for (a = 0; a < 2; a++) {
+      for (b = 0; b < 2; b++) {
+         for (c = 0; c < 2; c++) {
+            
+         }
+      }
+   }
    # z-check
    if board[x][y] == [player, player, player, player]:
        print("Player " + str(player) + " wins!")
