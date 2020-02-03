@@ -5,8 +5,16 @@ import User
 import math
 pygame.init()
 
+# user interface definitions
+LEFT = 1 # left button
+(width, height) = (600, 750)
+backgroundColor = (255,255,255)
+bg = pygame.image.load('gameboard.png')
+screen = pygame.display.set_mode((width, height))
+pygame.display.flip()# screen modifications must be done before flip()
+
 def updateBoard():
-    
+    pygame.draw.circle(screen, (0, 0, 0), [240, 80], 100, 50)
     print("----------------------------------")
     print("Move Number: " + str(moveNumber))
     print("Current Board: " + str(board))
@@ -25,14 +33,6 @@ def createEmptyBoard():
                 board[i][j].append(0)
 
     return board
-
-#user interface definitions
-LEFT = 1 # left button
-(width, height) = (600, 750)
-backgroundColor = (255,255,255)
-bg = pygame.image.load('gameboard.png')
-screen = pygame.display.set_mode((width, height))
-pygame.display.flip()# screen modifications must be done before flip()
 
 #game definitions
 player = 1
