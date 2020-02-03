@@ -1,7 +1,15 @@
 from PIL import Image
 
 def getUserInput(move):
-    return [move,move,move]
+    color = getColor(move)
+    xyzString = "000"
+
+    for xyzChoice, colorChoice in colorValues.items():
+        if color == colorChoice:
+            xyzString = xyzChoice
+
+    print("clicked square: " + str([int(xyzString[0]),int(xyzString[1]),int(xyzString[2])]))
+    return [int(xyzString[0]),int(xyzString[1]),int(xyzString[2])]
 
 # color to coordinate dict
 colorValues = {
@@ -81,3 +89,6 @@ def getColor(pos):
     return(value)
 
     colorMap.close()
+
+def getXYZ(color):
+    return(colorValues.get(color))

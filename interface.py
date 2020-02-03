@@ -6,11 +6,14 @@ import math
 pygame.init()
 
 def updateBoard():
-    print(board)
+    
+    print("----------------------------------")
+    print("Move Number: " + str(moveNumber))
+    print("Current Board: " + str(board))
 
 #how to start a new game w/empty board
 def createEmptyBoard():
-    print("ok")
+    print("creating Empty Board")
     board = []
     for i in range(4):
         empty = []
@@ -33,36 +36,39 @@ pygame.display.flip()# screen modifications must be done before flip()
 
 #game definitions
 player = 1
-move = 0
+moveNumber = 0
 cube = [0,0,0]
 board = createEmptyBoard()
 
 
 while not CheckWin.checkWin(cube, board, player):
-    #update move stuff
-    move+=1 #move count
+    #update moveNumber stuff
+    moveNumber+=1 #moveNumber count
     player *= -1 #changes player
 
     #update screen
     screen.blit(bg, (0, 0))
     pygame.display.flip()
 
-    #wait for a click
-    event = pygame.event.poll()
+    moveMade = False
+    while(moveMade == False):
+        #wait for a click
+        event = pygame.event.poll()
+        #print("Event registered. Type: " + str(event.type))
 
-    #if the red x is clicked
-    if event.type == pygame.QUIT:
-        pygame.quit()
+        #if the red x is clicked
+        if event.type == pygame.QUIT:
+            pygame.quit()
 
-    #if you left click
-    elif event.type == pygame.MOUSEBUTTONUP and event.button == LEFT:
-        print(event.pos)
-        print(User.getColor(event.pos))
+        #if you left click
+        elif event.type == pygame.MOUSEBUTTONUP and event.button == LEFT:
+            print("event: " + str(event))
+            #now that user input has been detected, play the game
+            cube = User.getUserInput(event.pos)
+            board[cube[0]][cube[1]][cube[2]] = player
+            updateBoard()
+            moveMade = True
 
-    #now that user input has been detected, play the game
 
-    cube = User.getUserInput(event.pos)
-    board[cube[0]][cube[1]][cube[2]] = player
-    updateBoard()
 
-print("player: " + player + " won!")
+print("player: " + str(player) + " won!")
