@@ -14,7 +14,6 @@ screen = pygame.display.set_mode((width, height))
 pygame.display.flip()# screen modifications must be done before flip()
 
 def updateBoard():
-    pygame.draw.circle(screen, (0, 0, 0), [240, 80], 100, 50)
     print("----------------------------------")
     print("Move Number: " + str(moveNumber))
     print("Current Board: " + str(board))
@@ -39,7 +38,8 @@ player = 1
 moveNumber = 0
 cube = [0,0,0]
 board = createEmptyBoard()
-
+pieces = []
+font = pygame.font.Font('freesansbold.ttf', 32)
 
 while not CheckWin.checkWin(cube, board, player):
     #update moveNumber stuff
@@ -48,6 +48,16 @@ while not CheckWin.checkWin(cube, board, player):
 
     #update screen
     screen.blit(bg, (0, 0))
+    for i in pieces:
+        if i[1] == 1:
+            text = font.render('O', True, (0,255,0), (0,0,255))
+        else:
+            text = font.render('X', True, (0,255,0), (0,0,255))
+
+        coord = i[0]
+        updatedCoord = (coord[0] - 5, coord[1] - 5)
+        screen.blit(text, updatedCoord)
+
     pygame.display.flip()
 
     moveMade = False
@@ -65,13 +75,18 @@ while not CheckWin.checkWin(cube, board, player):
             print("event: " + str(event))
             #now that user input has been detected, play the game
             cube = User.getUserInput(event.pos)
-            if board[cube[0]][cube[1]][cube[2]] == 0:
+            if cube == None:
+                print("Invalid Move")
+            elif board[cube[0]][cube[1]][cube[2]] == 0:
                 print("Valid Move")
+                pieces.append((event.pos, player))
                 board[cube[0]][cube[1]][cube[2]] = player
                 updateBoard()
                 moveMade = True
             else:
                 print("Invalid Move")
+
+
 
 
 

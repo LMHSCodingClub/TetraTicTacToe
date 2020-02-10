@@ -2,7 +2,10 @@ from PIL import Image
 
 def getUserInput(move):
     color = getColor(move)
-    xyzString = "000"
+    if color == (0,0,0) or color == (255,255,255):
+        return None
+
+    xyzString = ""
 
     for xyzChoice, colorChoice in colorValues.items():
         if color == colorChoice:
