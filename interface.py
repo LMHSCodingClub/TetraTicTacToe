@@ -65,9 +65,13 @@ while not CheckWin.checkWin(cube, board, player):
             print("event: " + str(event))
             #now that user input has been detected, play the game
             cube = User.getUserInput(event.pos)
-            board[cube[0]][cube[1]][cube[2]] = player
-            updateBoard()
-            moveMade = True
+            if board[cube[0]][cube[1]][cube[2]] == 0:
+                print("Valid Move")
+                board[cube[0]][cube[1]][cube[2]] = player
+                updateBoard()
+                moveMade = True
+            else:
+                print("Invalid Move")
 
 
 
