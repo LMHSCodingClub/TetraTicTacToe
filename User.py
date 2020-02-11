@@ -5,11 +5,13 @@ def getUserInput(move):
     if color == (0,0,0) or color == (255,255,255):
         return None
 
+    #set the move based on the clicked color, return None if no color match.
     xyzString = ""
-
     for xyzChoice, colorChoice in colorValues.items():
         if color == colorChoice:
             xyzString = xyzChoice
+    if xyzString == "":
+        return None
 
     print("clicked square: " + str([int(xyzString[0]),int(xyzString[1]),int(xyzString[2])]))
     return [int(xyzString[0]),int(xyzString[1]),int(xyzString[2])]
